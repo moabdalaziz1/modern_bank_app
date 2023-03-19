@@ -1,10 +1,14 @@
 import styles from "../style";
 import { arrowUp } from "../assets";
+import { motion } from "framer-motion";
 
 const GetStarted = () => (
-  <div 
+  <motion.div 
     className={`${styles.flexCenter} w-[140px] h-[140px] rounded-full
       bg-blue-gradient p-[2px] cursor-pointer sm:mt-0 mt-8`}
+    initial={{ scale: 0, }}
+    whileInView={{ scale: 1, }}
+    transition={{ duration: 2, type: 'spring', bounce: 0.35 }}
   >
 
     <div 
@@ -32,7 +36,7 @@ const GetStarted = () => (
       </p>
     </div>
 
-  </div>
+  </motion.div>
 )
 
 
